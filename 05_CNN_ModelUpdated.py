@@ -81,7 +81,7 @@ class Net(nn.Module):
   
 
         x = x.view(-1,16*11*11,) #input 61952
-    # why not x = x.view(-1, x.size(0))?
+    # why not x = x.view(-1, x.size(0))? # To earn a flattened vector to feed feedforward layer! 
 
         x = self.fc1(x)
         x = self.fc2(x)
